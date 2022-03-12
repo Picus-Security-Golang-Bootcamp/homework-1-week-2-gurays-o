@@ -1,16 +1,21 @@
-## Homework | Week 2
+# Movie Query App
+_Version: Week 2_
 
-Elimizde bir kitap listesi var. Bu uygulamanın 2 görevi var.
-1. Uygulama içerisindeki tüm kitapları çıktı olarak göstermek.
-2. Girdi olarak verilen kitap ismini varsa ekrana bastırmak yok ise kitabın mevcut olmadığına dair çıktı yazdırmak.
+A command line app to query top 10 movies of IMDB movie ranking list.
 
-### list command
-```
+## Usage
+#### Listing
+You can list movies by providing "list" command:
+
+```sh
 go run main.go list
 ```
-Bu komut ile uygulama içerisindeki tüm kitapları çıktı olarak görmek istiyoruz.
 
-### search command 
+#### Searching
+You can search movies by providing "search" command followed by your search query (not case-sensitive):
+
+```sh
+go run main.go search pulp fiction
 ```
-go run main.go search <bookName>
-go run main.go search Lord of the Ring: The Return of 
+If queried movie is found, full movie title and position in the list will be displayed.
+If it is not, a "Movie Not Found" message will be displayed.
